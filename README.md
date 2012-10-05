@@ -11,7 +11,7 @@ The interpreter itself is a JavaScript that can be used on any website. To use i
 To run a piece of code, you can use the `FiM.interprete` method:
 
 ```javascript
-var code = "Dear Princess Celestia: Letter One\nToday I learned how to sing.\nI sang "Hello World!"\nYour faithful student, Twilight Sparkle.";
+var code = "Dear Princess Celestia: Letter One\nToday I learned how to sing.\nI sang \"Hello World!\"\nYour faithful student, Twilight Sparkle.";
 FiM.interprete(code);
 ```
 

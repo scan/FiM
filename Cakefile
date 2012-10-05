@@ -2,7 +2,7 @@ fs = require 'fs'
 PEG = require 'pegjs'
 coffee = require 'coffee-script'
 
-sources = "#{__dirname}/src/index.coffee"
+sources = "#{__dirname}/interpreter.coffee"
 grammar = "#{__dirname}/grammar.pegjs"
 
 task 'build', ->

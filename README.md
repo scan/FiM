@@ -10,16 +10,20 @@ The interpreter itself is a JavaScript that can be used on any website. To use i
 
 To run a piece of code, you can use the `FiM.interprete` method:
 
-> var code = "Dear Princess Celestia: Letter One\nToday I learned how to sing.\nI sang "Hello World!"\nYour faithful student, Twilight Sparkle.";
-> FiM.interprete(code);
+```javascript
+var code = "Dear Princess Celestia: Letter One\nToday I learned how to sing.\nI sang "Hello World!"\nYour faithful student, Twilight Sparkle.";
+FiM.interprete(code);
+```
 
 The `interprete` method takes some options as the second parameter:
 
-> FiM.interprete(code, {
->    stdout: function(str) { alert(str); },
->    stderr: function(str) { alert(str); },
->    stdin: function() { prompt(); }
-> });
+```javascript
+FiM.interprete(code, {
+   stdout: function(str) { alert(str); },
+   stderr: function(str) { alert(str); },
+   stdin: function() { prompt(); }
+});
+```
 
 For `stdout` and `stderr`, the interpreter expects functions that take one string and somehow print it. Likewise with `stdin`, it expects a function that returns an input string. Per default, `stdin` is a prompt like above and `stderr` and `stdout` point to `console.log`, which may not be available on all browsers.
 

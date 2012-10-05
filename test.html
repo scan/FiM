@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FiM Language Test</title>
+        <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+        <script src="./fim.js"></script>
+        <script>
+            $(function() {
+                var stderr = function(str) { $('#stderr').append('<p><pre>'+str+'</pre></p>'); };
+                var stdout = function(str) { $('#stdout').append('<p>'+str+'</p>'); };
+
+                $('#compile').click(function() {
+                    $('#stdout, #stderr').empty();
+                    FiM.interprete($('#source').val(), {stderr: stderr, stdout: stdout});
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <textarea id="source">
+Dear Princess Celestia: Letter One
+
+Today I learned how to sing.
+
+I sang "Hello World!"
+
+Your faithful student, Twilight Sparkle.
+        </textarea>
+        <button type="button" id="compile">Execute!</button>
+        <div id="stdout">
+        </div>
+        <div id="stderr" style="color:red">
+        </div>
+    </body>
+</html>
